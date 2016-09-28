@@ -9,7 +9,7 @@ Docker image for building [rippled](https://github.com/ripple/rippled) HTML docs
 ## Run
 
 ```
-docker run -e GIT_REMOTE=ripple GIT_BRANCH=master -v $PWD:/opt/docs --rm bwilsonripple/rippled-docs:latest
+docker run -e GIT_REMOTE=ripple -e GIT_BRANCH=master -v $PWD:/opt/docs --rm bwilsonripple/rippled-docs:latest
 ```
 
 After building the docs, an `html` folder will be copied to your current working directory. Navigate to the `html/index.html` file in your browser to see the docs.
