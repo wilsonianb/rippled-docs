@@ -1,2 +1,0 @@
-import boost ;
-boost.use-project ;

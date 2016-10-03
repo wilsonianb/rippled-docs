@@ -9,7 +9,11 @@ git remote add $GIT_REMOTE https://github.com/$GIT_REMOTE/rippled.git
 git fetch $GIT_REMOTE
 git rebase $GIT_REMOTE/$GIT_BRANCH
 
+git rm --cached src/nudb/doc/docca src/nudb/extras/beast src/nudb/extras/rocksdb
+git submodule update --init
+
 cd docs
+chmod +x makeqbk.sh
 ./makeqbk.sh
 $BOOST_ROOT/b2
 
